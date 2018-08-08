@@ -1,0 +1,14 @@
+{
+  "name": "my-first-npm-project",
+  "version": "1.0.0",
+  "description": "This is a sample project to understand npm and nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manohar",
+  "license": "ISC",
+  "dependencies": {
+    "js-md5": "^0.7.3"
+  }
+}
