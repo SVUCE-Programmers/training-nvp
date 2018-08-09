@@ -5,7 +5,9 @@ var url = require('url');
 http.createServer(function(req,res){
     var q = url.parse(req.url, true);
     var fileName = "." + q.pathname;
+    console.time("Getting data");
     fs.readFile(fileName, function(error, data){
+        console.timeEnd('Getting data');
         if(error){
             res.writeHead(404,{'Content-Type': 'text/html'});
             res.end('404 File Not Found: '+ fileName);

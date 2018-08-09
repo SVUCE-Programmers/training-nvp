@@ -1,0 +1,7 @@
+1. NPM is the node package manager
+2. It maintains a repository of Nodejs packages/modules
+3. Users (you and me ) can also publish their projects to NPM repository
+4. Also a way developers share their packages
+5. npm is also available as a command line utility
+6. It also does package version management
+7. It also does package dependency management

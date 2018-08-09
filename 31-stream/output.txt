@@ -1,0 +1,769 @@
+Last login: Wed Aug  8 10:46:27 on ttys002
+You have mail.
+$ मनोहर नेगी ~:
+10074 ◯  cd ~/git/training-nvp/28-client 
+$ मनोहर नेगी ~/git/training-nvp/28-client:(50m|git@master!)
+10075 ± ll                                                                      ✹ ✭
+total 8
+-rw-r--r--  1 mnegi  staff   555B Aug  9 12:19 client.js
+$ मनोहर नेगी ~/git/training-nvp/28-client:(50m|git@master!)
+10076 ± node client.js                                                          ✹ ✭
+<html>
+    <head>
+        <title>Index page</title>
+    </head>
+    <body>
+        <h1>Index page</h1>
+        <p>This is index page.</p>
+    </body>
+</html>
+$ मनोहर नेगी ~/git/training-nvp/28-client:(50m|git@master!)
+10077 ± node client.js                                                          ✹ ✭
+<html>
+    <head>
+        <title>Contact page</title>
+    </head>
+    <body>
+        <h1>Contact page</h1>
+        <p>Contact us @ manohar@gmail.com</p>
+    </body>
+</html>
+$ मनोहर नेगी ~/git/training-nvp/28-client:(52m|git@master!)
+10077 ± clear                                                                   ✹ ✭
+
+$ मनोहर नेगी ~/git/training-nvp/28-client:(1h31m|git@master!)
+10078 ± cd ../stream                                                            ✹ ✭
+$ मनोहर नेगी ~/git/training-nvp/stream:(1h31m|git@master!)
+10079 ± node read-stream.js                                                     ✹ ✭
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::3000
+    at Object.exports._errnoException (util.js:1008:11)
+    at exports._exceptionWithHostPort (util.js:1031:20)
+    at Server._listen2 (net.js:1253:14)
+    at listen (net.js:1289:10)
+    at Server.listen (net.js:1385:5)
+    at Object.<anonymous> (/Users/mnegi/git/training-nvp/stream/read-stream.js:21:4)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+$ मनोहर नेगी ~/git/training-nvp/stream:(1h31m|git@master!)
+10080 ± node read-stream.js                                                   ⏎ ✹ ✭
+^C
+$ मनोहर नेगी ~/git/training-nvp/stream:(1h32m|git@master!)
+10080 ± cd ../27-server                                                       ⏎ ✹ ✭
+$ मनोहर नेगी ~/git/training-nvp/27-server:(1h32m|git@master!)
+10081 ± ll                                                                      ✹ ✭
+total 16200
+-rw-r--r--  1 mnegi  staff   172B Aug  9 11:10 contact.html
+-rw-r--r--  1 mnegi  staff   157B Aug  9 11:09 index.html
+-rw-r--r--  1 mnegi  staff   990B Aug  9 12:08 index.js
+-rw-r--r--@ 1 mnegi  staff   653K Apr  7  2015 test.jpg
+-rwxr-xr-x  1 mnegi  staff   7.3M May 19 09:19 trailer.mp4
+$ मनोहर नेगी ~/git/training-nvp/27-server:(1h32m|git@master!)
+10082 ± node index.js                                                           ✹ ✭
+
+
+^C
+$ मनोहर नेगी ~/git/training-nvp/27-server:(1h33m|git@master!)
+10083 ± node index.js                                                         ⏎ ✹ ✭
+^C
+$ मनोहर नेगी ~/git/training-nvp/27-server:(1h40m|git@master!)
+10083 ± node index.js                                                         ⏎ ✹ ✭
+^C
+$ मनोहर नेगी ~/git/training-nvp/27-server:(1h40m|git@master!)
+10083 ± cd ../stream                                                          ⏎ ✹ ✭
+$ मनोहर नेगी ~/git/training-nvp/stream:(1h40m|git@master!)
+10084 ± clear                                                                   ✹ ✭
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ मनोहर नेगी ~/git/training-nvp/stream:(1h40m|git@master!)
+10085 ± node read-stream.js                                                     ✹ ✭
+^C
+$ मनोहर नेगी ~/git/training-nvp/stream:(1h42m|git@master!)
+10086 ± cd ..                                                                 ⏎ ✹ ✭
+$ मनोहर नेगी ~/git/training-nvp:(2h27m|git@master!)
+10087 ± git status                                                              ✹ ✭
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+	modified:   27-server/index.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	27-server/trailer.mp4
+	28-client/
+	buffer/
+	client-server/
+	events/
+	fs/
+	global/
+	stream/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ मनोहर नेगी ~/git/training-nvp:(2h27m|git@master!)
+10088 ± git add 27-server/                                                      ✹ ✭
+$ मनोहर नेगी ~/git/training-nvp:(2h27m|git@master!)
+10089 ± git add .gitignore                                                    ✹ ✚ ✭
+$ मनोहर नेगी ~/git/training-nvp:(2h27m|git@master!)
+10090 ± git add 28-client/                                                      ✚ ✭
+$ मनोहर नेगी ~/git/training-nvp:(2h27m|git@master!)
+10091 ± git status                                                              ✚ ✭
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   .gitignore
+	modified:   27-server/index.js
+	new file:   27-server/trailer.mp4
+	new file:   28-client/client.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	buffer/
+	client-server/
+	events/
+	fs/
+	global/
+	stream/
+
+$ मनोहर नेगी ~/git/training-nvp:(2h27m|git@master!)
+10092 ± git push origin master                                                  ✚ ✭
+Everything up-to-date
+$ मनोहर नेगी ~/git/training-nvp:(2h28m|git@master!)
+10093 ± clear                                                                   ✚ ✭
+
+$ मनोहर नेगी ~/git/training-nvp:(2h32m|git@master!)
+10094 ± git status                                                              ✚ ✭
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   .gitignore
+	modified:   27-server/index.js
+	new file:   27-server/trailer.mp4
+	new file:   28-client/client.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	buffer/
+	client-server/
+	events/
+	fs/
+	global/
+	stream/
+
+$ मनोहर नेगी ~/git/training-nvp:(2h33m|git@master!)
+10095 ± git commit -m "added http client"                                       ✚ ✭
+[master a496d84] added http client
+ 4 files changed, 37 insertions(+), 1 deletion(-)
+ create mode 100755 27-server/trailer.mp4
+ create mode 100644 28-client/client.js
+$ मनोहर नेगी ~/git/training-nvp:(0m|git@master!)
+10096 ± git push origin master                                                    ✭
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 7.23 MiB | 231.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:mnegi/training-nvp.git
+   867d47e..a496d84  master -> master
+$ मनोहर नेगी ~/git/training-nvp:(0m|git@master!)
+10097 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp:(12m|git@master!)
+10098 ± ll                                                                        ✭
+total 0
+drwxr-xr-x   3 mnegi  staff   102B Aug  6 11:40 00-sample-js
+drwxr-xr-x   4 mnegi  staff   136B Apr  2 11:24 01-hello-world
+drwxr-xr-x   7 mnegi  staff   238B Jul 23 20:46 02-image-changer
+drwxr-xr-x   5 mnegi  staff   170B Jun 25 11:03 03-greet-user
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 04-player-name
+drwxr-xr-x   5 mnegi  staff   170B Apr 17 10:35 05-number-guessing-game
+drwxr-xr-x   3 mnegi  staff   102B Apr  2 11:24 06-assessment-test
+drwxr-xr-x   6 mnegi  staff   204B Jul 23 17:14 07-variables
+drwxr-xr-x   7 mnegi  staff   238B Apr 24 10:51 08-print-products
+drwxr-xr-x   8 mnegi  staff   272B Jul 24 09:46 09-top-5-searches
+drwxr-xr-x   5 mnegi  staff   170B May 15 19:04 10-silly-story-generator
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 11-conditional-statements
+drwxr-xr-x  11 mnegi  staff   374B Apr  2 11:24 12-loops
+drwxr-xr-x  16 mnegi  staff   544B Jul  8 09:20 13-functions
+drwxr-xr-x  16 mnegi  staff   544B Aug  2 12:57 14-events
+drwxr-xr-x   6 mnegi  staff   204B Apr 24 16:40 15-assignment-image-gallery
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 16-introduction-too-oojs
+drwxr-xr-x   8 mnegi  staff   272B Apr  2 11:24 17-json
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 18-advanced
+drwxr-xr-x   7 mnegi  staff   238B Apr  2 11:24 19-bouncing-balls
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 20-assessment
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 10:24 21-hello-nodejs
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 12:08 22-npm
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:03 23-callback
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:35 24-webserver
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 10:22 25-req
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 10:29 26-url
+drwxr-xr-x   8 mnegi  staff   272B Aug  9 13:02 27-server
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 12:17 28-client
+drwxr-xr-x  11 mnegi  staff   374B Aug  9 13:54 buffer
+drwxr-xr-x   4 mnegi  staff   136B Aug  9 09:06 client-server
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 13:55 events
+drwxr-xr-x  16 mnegi  staff   544B Aug  9 09:07 fs
+drwxr-xr-x   9 mnegi  staff   306B Aug  9 09:28 global
+drwxr-xr-x  15 mnegi  staff   510B Aug  9 13:55 stream
+$ मनोहर नेगी ~/git/training-nvp:(12m|git@master!)
+10099 ± cd 29-events                                                              ✭
+cd:cd:13: no such file or directory: 29-events
+$ मनोहर नेगी ~/git/training-nvp:(12m|git@master!)
+10100 ± mkdir 29-events                                                         ⏎ ✭
+$ मनोहर नेगी ~/git/training-nvp:(12m|git@master!)
+10101 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp:(12m|git@master!)
+10102 ± ll                                                                        ✭
+total 0
+drwxr-xr-x   3 mnegi  staff   102B Aug  6 11:40 00-sample-js
+drwxr-xr-x   4 mnegi  staff   136B Apr  2 11:24 01-hello-world
+drwxr-xr-x   7 mnegi  staff   238B Jul 23 20:46 02-image-changer
+drwxr-xr-x   5 mnegi  staff   170B Jun 25 11:03 03-greet-user
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 04-player-name
+drwxr-xr-x   5 mnegi  staff   170B Apr 17 10:35 05-number-guessing-game
+drwxr-xr-x   3 mnegi  staff   102B Apr  2 11:24 06-assessment-test
+drwxr-xr-x   6 mnegi  staff   204B Jul 23 17:14 07-variables
+drwxr-xr-x   7 mnegi  staff   238B Apr 24 10:51 08-print-products
+drwxr-xr-x   8 mnegi  staff   272B Jul 24 09:46 09-top-5-searches
+drwxr-xr-x   5 mnegi  staff   170B May 15 19:04 10-silly-story-generator
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 11-conditional-statements
+drwxr-xr-x  11 mnegi  staff   374B Apr  2 11:24 12-loops
+drwxr-xr-x  16 mnegi  staff   544B Jul  8 09:20 13-functions
+drwxr-xr-x  16 mnegi  staff   544B Aug  2 12:57 14-events
+drwxr-xr-x   6 mnegi  staff   204B Apr 24 16:40 15-assignment-image-gallery
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 16-introduction-too-oojs
+drwxr-xr-x   8 mnegi  staff   272B Apr  2 11:24 17-json
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 18-advanced
+drwxr-xr-x   7 mnegi  staff   238B Apr  2 11:24 19-bouncing-balls
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 20-assessment
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 10:24 21-hello-nodejs
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 12:08 22-npm
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:03 23-callback
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:35 24-webserver
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 10:22 25-req
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 10:29 26-url
+drwxr-xr-x   8 mnegi  staff   272B Aug  9 13:02 27-server
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 12:17 28-client
+drwxr-xr-x   2 mnegi  staff    68B Aug  9 14:16 29-events
+drwxr-xr-x  11 mnegi  staff   374B Aug  9 13:54 buffer
+drwxr-xr-x   4 mnegi  staff   136B Aug  9 09:06 client-server
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 13:55 events
+drwxr-xr-x  16 mnegi  staff   544B Aug  9 09:07 fs
+drwxr-xr-x   9 mnegi  staff   306B Aug  9 09:28 global
+drwxr-xr-x  15 mnegi  staff   510B Aug  9 13:55 stream
+$ मनोहर नेगी ~/git/training-nvp:(13m|git@master!)
+10103 ± cd 29-events                                                              ✭
+$ मनोहर नेगी ~/git/training-nvp/29-events:(17m|git@master!)
+10104 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp/29-events:(17m|git@master!)
+10105 ± node index.js                                                             ✭
+1. create event emitter object
+2. bind event handler
+4. emit the coonection event
+3. event handler called
+$ मनोहर नेगी ~/git/training-nvp/29-events:(17m|git@master!)
+10106 ± node index.js                                                             ✭
+1. create event emitter object
+2. bind event handler
+4. emit the coonection event
+$ मनोहर नेगी ~/git/training-nvp/29-events:(18m|git@master!)
+10106 ± node index.js                                                             ✭
+1. create event emitter object
+2. bind event handler
+4. emit the coonection event
+open event triggered...
+$ मनोहर नेगी ~/git/training-nvp/29-events:(19m|git@master!)
+10106 ± clear                                                                     ✭
+
+
+
+
+
+
+
+$ मनोहर नेगी ~/git/training-nvp/29-events:(22m|git@master!)
+10107 ± node index.js                                                             ✭
+2
+listner 1 for event - connection
+listner 2 for event - connection
+$ मनोहर नेगी ~/git/training-nvp/29-events:(22m|git@master!)
+10108 ± node index.js                                                             ✭
+3
+listner 1 for event - connection
+listner 2 for event - connection
+one time listener
+listner 1 for event - connection
+listner 2 for event - connection
+$ मनोहर नेगी ~/git/training-nvp/29-events:(23m|git@master!)
+10108 ± cd ../buffer                                                              ✭
+$ मनोहर नेगी ~/git/training-nvp/buffer:(34m|git@master!)
+10109 ± node read.js                                                              ✭
+<Buffer 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a>
+abcdefghijklmnopqrstuvwxyz
+abcde
+abcde
+abcde
+$ मनोहर नेगी ~/git/training-nvp/buffer:(34m|git@master!)
+10110 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp/buffer:(36m|git@master!)
+10111 ± node read.js                                                              ✭
+<Buffer 76 61 72 20 62 75 66 20 3d 20 6e 65 77 20 42 75 66 66 65 72 28 27 53 69 6d 70 6c 79 20 45 61 73 79 20 4c 65 61 72 6e 69 6e 67 27 29 3b 0a 76 61 72 20 ... >
+$ मनोहर नेगी ~/git/training-nvp/buffer:(36m|git@master!)
+10112 ± clear                                                                     ✭
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ मनोहर नेगी ~/git/training-nvp/buffer:(38m|git@master!)
+10113 ± node read.js                                                              ✭
+<Buffer 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a>
+abcdefghijklmnopqrstuvwxyz
+abcde
+abcde
+abcde
+$ मनोहर नेगी ~/git/training-nvp/buffer:(38m|git@master!)
+10114 ± clear                                                                     ✭
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ मनोहर नेगी ~/git/training-nvp/buffer:(42m|git@master!)
+10115 ± node read.js                                                              ✭
+<Buffer 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a>
+abcdefghijklmnopqrstuvwxyz
+abcde
+abcde
+abcde
+{ type: 'Buffer',
+  data: 
+   [ 97,
+     98,
+     99,
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122 ] }
+$ मनोहर नेगी ~/git/training-nvp/buffer:(42m|git@master!)
+10116 ±                                                                           ✭
+$ मनोहर नेगी ~/git/training-nvp/buffer:(45m|git@master!)
+10116 ± cd ..                                                                     ✭
+$ मनोहर नेगी ~/git/training-nvp:(45m|git@master!)
+10117 ± ll                                                                        ✭
+total 0
+drwxr-xr-x   3 mnegi  staff   102B Aug  6 11:40 00-sample-js
+drwxr-xr-x   4 mnegi  staff   136B Apr  2 11:24 01-hello-world
+drwxr-xr-x   7 mnegi  staff   238B Jul 23 20:46 02-image-changer
+drwxr-xr-x   5 mnegi  staff   170B Jun 25 11:03 03-greet-user
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 04-player-name
+drwxr-xr-x   5 mnegi  staff   170B Apr 17 10:35 05-number-guessing-game
+drwxr-xr-x   3 mnegi  staff   102B Apr  2 11:24 06-assessment-test
+drwxr-xr-x   6 mnegi  staff   204B Jul 23 17:14 07-variables
+drwxr-xr-x   7 mnegi  staff   238B Apr 24 10:51 08-print-products
+drwxr-xr-x   8 mnegi  staff   272B Jul 24 09:46 09-top-5-searches
+drwxr-xr-x   5 mnegi  staff   170B May 15 19:04 10-silly-story-generator
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 11-conditional-statements
+drwxr-xr-x  11 mnegi  staff   374B Apr  2 11:24 12-loops
+drwxr-xr-x  16 mnegi  staff   544B Jul  8 09:20 13-functions
+drwxr-xr-x  16 mnegi  staff   544B Aug  2 12:57 14-events
+drwxr-xr-x   6 mnegi  staff   204B Apr 24 16:40 15-assignment-image-gallery
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 16-introduction-too-oojs
+drwxr-xr-x   8 mnegi  staff   272B Apr  2 11:24 17-json
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 18-advanced
+drwxr-xr-x   7 mnegi  staff   238B Apr  2 11:24 19-bouncing-balls
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 20-assessment
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 10:24 21-hello-nodejs
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 12:08 22-npm
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:03 23-callback
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:35 24-webserver
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 10:22 25-req
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 10:29 26-url
+drwxr-xr-x   8 mnegi  staff   272B Aug  9 13:02 27-server
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 12:17 28-client
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 14:16 29-events
+drwxr-xr-x  11 mnegi  staff   374B Aug  9 13:54 buffer
+drwxr-xr-x   4 mnegi  staff   136B Aug  9 09:06 client-server
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 13:55 events
+drwxr-xr-x  16 mnegi  staff   544B Aug  9 09:07 fs
+drwxr-xr-x   9 mnegi  staff   306B Aug  9 09:28 global
+drwxr-xr-x  15 mnegi  staff   510B Aug  9 13:55 stream
+$ मनोहर नेगी ~/git/training-nvp:(45m|git@master!)
+10118 ± mv buffer 30-buffer                                                       ✭
+$ मनोहर नेगी ~/git/training-nvp:(45m|git@master!)
+10119 ± ll                                                                        ✭
+total 0
+drwxr-xr-x   3 mnegi  staff   102B Aug  6 11:40 00-sample-js
+drwxr-xr-x   4 mnegi  staff   136B Apr  2 11:24 01-hello-world
+drwxr-xr-x   7 mnegi  staff   238B Jul 23 20:46 02-image-changer
+drwxr-xr-x   5 mnegi  staff   170B Jun 25 11:03 03-greet-user
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 04-player-name
+drwxr-xr-x   5 mnegi  staff   170B Apr 17 10:35 05-number-guessing-game
+drwxr-xr-x   3 mnegi  staff   102B Apr  2 11:24 06-assessment-test
+drwxr-xr-x   6 mnegi  staff   204B Jul 23 17:14 07-variables
+drwxr-xr-x   7 mnegi  staff   238B Apr 24 10:51 08-print-products
+drwxr-xr-x   8 mnegi  staff   272B Jul 24 09:46 09-top-5-searches
+drwxr-xr-x   5 mnegi  staff   170B May 15 19:04 10-silly-story-generator
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 11-conditional-statements
+drwxr-xr-x  11 mnegi  staff   374B Apr  2 11:24 12-loops
+drwxr-xr-x  16 mnegi  staff   544B Jul  8 09:20 13-functions
+drwxr-xr-x  16 mnegi  staff   544B Aug  2 12:57 14-events
+drwxr-xr-x   6 mnegi  staff   204B Apr 24 16:40 15-assignment-image-gallery
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 16-introduction-too-oojs
+drwxr-xr-x   8 mnegi  staff   272B Apr  2 11:24 17-json
+drwxr-xr-x   6 mnegi  staff   204B Apr  2 11:24 18-advanced
+drwxr-xr-x   7 mnegi  staff   238B Apr  2 11:24 19-bouncing-balls
+drwxr-xr-x   5 mnegi  staff   170B Apr  2 11:24 20-assessment
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 10:24 21-hello-nodejs
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 12:08 22-npm
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:03 23-callback
+drwxr-xr-x   5 mnegi  staff   170B Aug  8 14:35 24-webserver
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 10:22 25-req
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 10:29 26-url
+drwxr-xr-x   8 mnegi  staff   272B Aug  9 13:02 27-server
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 12:17 28-client
+drwxr-xr-x   3 mnegi  staff   102B Aug  9 14:16 29-events
+drwxr-xr-x  11 mnegi  staff   374B Aug  9 13:54 30-buffer
+drwxr-xr-x   4 mnegi  staff   136B Aug  9 09:06 client-server
+drwxr-xr-x   5 mnegi  staff   170B Aug  9 13:55 events
+drwxr-xr-x  16 mnegi  staff   544B Aug  9 09:07 fs
+drwxr-xr-x   9 mnegi  staff   306B Aug  9 09:28 global
+drwxr-xr-x  15 mnegi  staff   510B Aug  9 13:55 stream
+$ मनोहर नेगी ~/git/training-nvp:(45m|git@master!)
+10120 ± cd stream                                                                 ✭
+$ मनोहर नेगी ~/git/training-nvp/stream:(53m|git@master!)
+10121 ± ll                                                                        ✭
+total 14984
+-rw-r--r--@ 1 mnegi  staff    13K May 13 16:44 aws-solution-architect-associate-training-in-bangalore.jpg
+-rw-r--r--  1 mnegi  staff   246B Apr  2 11:24 chain.js
+-rw-r--r--  1 mnegi  staff   251B Jun 10 16:07 chain2.js
+-rw-r--r--  1 mnegi  staff    38B Apr  2 11:24 file.txt
+-rw-r--r--  1 mnegi  staff   1.6K Jun 10 16:07 input-2.txt
+-rw-r--r--  1 mnegi  staff   1.6K Jun 10 16:07 input.txt
+-rw-r--r--  1 mnegi  staff   735B Jul 26 12:33 input.txt.gz
+-rw-r--r--  1 mnegi  staff   1.6K Jul 13 10:20 output.txt
+-rw-r--r--  1 mnegi  staff   341B Apr  2 11:24 pipe.js
+-rw-r--r--  1 mnegi  staff   737B Aug  9 13:53 read-stream.js
+-rw-r--r--  1 mnegi  staff   461B Apr  2 11:24 read.js
+-rwxr-xr-x  1 mnegi  staff   7.3M May 19 09:19 trailer.mp4
+-rw-r--r--  1 mnegi  staff   499B Apr  2 11:24 write.js
+$ मनोहर नेगी ~/git/training-nvp/stream:(53m|git@master!)
+10122 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp/stream:(55m|git@master!)
+10123 ± node read.js                                                              ✭
+Program Ended
+read Question 1.
+Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?
+1. No
+2. Yes
+3. Only in VPC
+Answer
+2. Yes
+Question 2.
+In reviewing the Auto Scaling events for your application you notice that your application is scaling up and down multiple times in the same hour. What design choice could you make to optimize for cost while preserving elasticity? Choose 2 answers
+1. Modify the Auto Scaling policy to use scheduled scaling actions
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Amazon CloudWatch alarm period that triggers your Auto Scaling scale down policy.
+4. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+5. Modify the Auto Scaling group termination policy to terminate the oldest instance first.
+Answer
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+Question 3.
+What does Amazon EC2 provide?
+1. Virtual servers in the Cloud.
+2. Physical servers, remotely managed by the customer.
+3. A platform to run code (Java, PHP, Python), paying on an hourly basis.
+4. Computer Clusters in the Cloud.
+Answer
+1. Virtual servers in the Cloud.
+Question 4.
+You are deploying an application on EC2 that must call AWS APIs. What method of securely passing credentials to the application should you use?
+1. Store API credentials as an object in Amazon Simple Storage Service.
+2. Pass API credentials to the instance using instance userdata.
+3. Use AWS Identity and Access Management roles for EC2 instances.
+4. Embed the API credentials into your JAR files.
+Answer
+
+Question 1.
+Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?
+1. No
+2. Yes
+3. Only in VPC
+Answer
+2. Yes
+Question 2.
+In reviewing the Auto Scaling events for your application you notice that your application is scaling up and down multiple times in the same hour. What design choice could you make to optimize for cost while preserving elasticity? Choose 2 answers
+1. Modify the Auto Scaling policy to use scheduled scaling actions
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Amazon CloudWatch alarm period that triggers your Auto Scaling scale down policy.
+4. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+5. Modify the Auto Scaling group termination policy to terminate the oldest instance first.
+Answer
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+Question 3.
+What does Amazon EC2 provide?
+1. Virtual servers in the Cloud.
+2. Physical servers, remotely managed by the customer.
+3. A platform to run code (Java, PHP, Python), paying on an hourly basis.
+4. Computer Clusters in the Cloud.
+Answer
+1. Virtual servers in the Cloud.
+Question 4.
+You are deploying an application on EC2 that must call AWS APIs. What method of securely passing credentials to the application should you use?
+1. Store API credentials as an object in Amazon Simple Storage Service.
+2. Pass API credentials to the instance using instance userdata.
+3. Use AWS Identity and Access Management roles for EC2 instances.
+4. Embed the API credentials into your JAR files.
+Answer
+
+$ मनोहर नेगी ~/git/training-nvp/stream:(55m|git@master!)
+10124 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp/stream:(55m|git@master!)
+10125 ± node read.js                                                              ✭
+Program Ended
+read ---->Question 1.
+Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?
+1. No
+2. Yes
+3. Only in VPC
+Answer
+2. Yes
+Question 2.
+In reviewing the Auto Scaling events for your application you notice that your application is scaling up and down multiple times in the same hour. What design choice could you make to optimize for cost while preserving elasticity? Choose 2 answers
+1. Modify the Auto Scaling policy to use scheduled scaling actions
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Amazon CloudWatch alarm period that triggers your Auto Scaling scale down policy.
+4. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+5. Modify the Auto Scaling group termination policy to terminate the oldest instance first.
+Answer
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+Question 3.
+What does Amazon EC2 provide?
+1. Virtual servers in the Cloud.
+2. Physical servers, remotely managed by the customer.
+3. A platform to run code (Java, PHP, Python), paying on an hourly basis.
+4. Computer Clusters in the Cloud.
+Answer
+1. Virtual servers in the Cloud.
+Question 4.
+You are deploying an application on EC2 that must call AWS APIs. What method of securely passing credentials to the application should you use?
+1. Store API credentials as an object in Amazon Simple Storage Service.
+2. Pass API credentials to the instance using instance userdata.
+3. Use AWS Identity and Access Management roles for EC2 instances.
+4. Embed the API credentials into your JAR files.
+Answer
+
+Question 1.
+Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?
+1. No
+2. Yes
+3. Only in VPC
+Answer
+2. Yes
+Question 2.
+In reviewing the Auto Scaling events for your application you notice that your application is scaling up and down multiple times in the same hour. What design choice could you make to optimize for cost while preserving elasticity? Choose 2 answers
+1. Modify the Auto Scaling policy to use scheduled scaling actions
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Amazon CloudWatch alarm period that triggers your Auto Scaling scale down policy.
+4. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+5. Modify the Auto Scaling group termination policy to terminate the oldest instance first.
+Answer
+2. Modify the Auto Scaling group cool-down timers.
+3. Modify the Auto Scaling group termination policy to terminate the newest instance first.
+Question 3.
+What does Amazon EC2 provide?
+1. Virtual servers in the Cloud.
+2. Physical servers, remotely managed by the customer.
+3. A platform to run code (Java, PHP, Python), paying on an hourly basis.
+4. Computer Clusters in the Cloud.
+Answer
+1. Virtual servers in the Cloud.
+Question 4.
+You are deploying an application on EC2 that must call AWS APIs. What method of securely passing credentials to the application should you use?
+1. Store API credentials as an object in Amazon Simple Storage Service.
+2. Pass API credentials to the instance using instance userdata.
+3. Use AWS Identity and Access Management roles for EC2 instances.
+4. Embed the API credentials into your JAR files.
+Answer
+
+$ मनोहर नेगी ~/git/training-nvp/stream:(55m|git@master!)
+10126 ± node write.js                                                             ✭
+Program Ended
+Write completed.
+$ मनोहर नेगी ~/git/training-nvp/stream:(57m|git@master!)
+10127 ± ll                                                                        ✭
+total 14960
+-rw-r--r--@ 1 mnegi  staff    13K May 13 16:44 aws-solution-architect-associate-training-in-bangalore.jpg
+-rw-r--r--  1 mnegi  staff   246B Apr  2 11:24 chain.js
+-rw-r--r--  1 mnegi  staff   251B Jun 10 16:07 chain2.js
+-rw-r--r--  1 mnegi  staff    38B Apr  2 11:24 file.txt
+-rw-r--r--  1 mnegi  staff    20B Aug  9 15:00 output.txt
+-rw-r--r--  1 mnegi  staff   341B Apr  2 11:24 pipe.js
+-rw-r--r--  1 mnegi  staff   737B Aug  9 13:53 read-stream.js
+-rw-r--r--  1 mnegi  staff   500B Aug  9 14:58 read.js
+-rwxr-xr-x  1 mnegi  staff   7.3M May 19 09:19 trailer.mp4
+-rw-r--r--  1 mnegi  staff   498B Aug  9 15:00 write.js
+$ मनोहर नेगी ~/git/training-nvp/stream:(58m|git@master!)
+10128 ± node pipe.js                                                              ✭
+Program Ended
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: ENOENT: no such file or directory, open 'input.txt'
+    at Error (native)
+$ मनोहर नेगी ~/git/training-nvp/stream:(58m|git@master!)
+10129 ± ll                                                                      ⏎ ✭
+total 14952
+-rw-r--r--@ 1 mnegi  staff    13K May 13 16:44 aws-solution-architect-associate-training-in-bangalore.jpg
+-rw-r--r--  1 mnegi  staff   246B Apr  2 11:24 chain.js
+-rw-r--r--  1 mnegi  staff   251B Jun 10 16:07 chain2.js
+-rw-r--r--  1 mnegi  staff    38B Apr  2 11:24 file.txt
+-rw-r--r--  1 mnegi  staff     0B Aug  9 15:01 output.txt
+-rw-r--r--  1 mnegi  staff   341B Apr  2 11:24 pipe.js
+-rw-r--r--  1 mnegi  staff   737B Aug  9 13:53 read-stream.js
+-rw-r--r--  1 mnegi  staff   500B Aug  9 14:58 read.js
+-rwxr-xr-x  1 mnegi  staff   7.3M May 19 09:19 trailer.mp4
+-rw-r--r--  1 mnegi  staff   498B Aug  9 15:00 write.js
+$ मनोहर नेगी ~/git/training-nvp/stream:(58m|git@master!)
+10130 ± node pipe.js                                                              ✭
+Program Ended
+$ मनोहर नेगी ~/git/training-nvp/stream:(59m|git@master!)
+10131 ± clear                                                                     ✭
+
+$ मनोहर नेगी ~/git/training-nvp/stream:(59m|git@master!)
+10132 ± ll                                                                        ✭
+total 14960
+-rw-r--r--@ 1 mnegi  staff    13K May 13 16:44 aws-solution-architect-associate-training-in-bangalore.jpg
+-rw-r--r--  1 mnegi  staff   246B Apr  2 11:24 chain.js
+-rw-r--r--  1 mnegi  staff   251B Jun 10 16:07 chain2.js
+-rw-r--r--  1 mnegi  staff    44B Aug  9 15:02 input.txt
+-rw-r--r--  1 mnegi  staff    44B Aug  9 15:02 output.txt
+-rw-r--r--  1 mnegi  staff   341B Apr  2 11:24 pipe.js
+-rw-r--r--  1 mnegi  staff   737B Aug  9 13:53 read-stream.js
+-rw-r--r--  1 mnegi  staff   500B Aug  9 14:58 read.js
+-rwxr-xr-x  1 mnegi  staff   7.3M May 19 09:19 trailer.mp4
+-rw-r--r--  1 mnegi  staff   498B Aug  9 15:00 write.js
+$ मनोहर नेगी ~/git/training-nvp/stream:(59m|git@master!)
+10133 ± man cd                                                                    ✭
+
+
+
+
+
+
+
+
+
+
+           umask         No**        Yes       Yes
+           unalias       No**        Yes       Yes
+           uncomplete    No          Yes       No
+           unhash        No          Yes       No
+           unlimit       No          Yes       No
+           unset         No          Yes       Yes
+           unsetenv      No          Yes       No
+           until         No          No        Yes
+           wait          No**        Yes       Yes
+           where         No          Yes       No
+           which         Yes         Yes       No
+           while         No          Yes       Yes
+
+SEE ALSO
+     csh(1), echo(1), false(1), info(1), kill(1), login(1), nice(1),
+     nohup(1), printenv(1), pwd(1), sh(1), test(1), time(1), true(1),
+     which(1)
+
+HISTORY
+     The builtin manual page first appeared in FreeBSD 3.4.
+
+AUTHORS
+     This manual page was written by Sheldon Hearn <sheldonh@FreeBSD.org>.
+
+BSD                            February 23, 2005
