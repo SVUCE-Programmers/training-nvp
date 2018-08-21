@@ -84,5 +84,21 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login', navContact: 'contact'});
 });
 
+router.post('/login', function(req, res, next){
+  // read the inputs
+  var email = req.body.email;
+  var pass = req.body.password;
+
+  if(email && email != '' && pass && pass != ''){
+    // create a session and store some info
+    // redirect to dashboard
+    console.log(email)
+    console.log(pass)
+    res.redirect('/admin')
+  }else{
+    res.render('login', { title: 'Login', hasError: true, error: 'Invalid login details'});
+  }
+});
+
 
 module.exports = router;

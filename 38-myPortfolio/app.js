@@ -24,8 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// middleware function
 var isLoggedIn = function (req, res, next) {
-  // if(user is logged in)
   if(req.session && req.session.user){
     console.log('LOGGED:')
     next()
