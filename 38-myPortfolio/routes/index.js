@@ -72,4 +72,12 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact', navContact: 'contact'});
 });
 
+router.post('/contact', function(req, res, next) {
+  res.render('confirm', { title: 'Confirm page', navContact: 'contact', data: req.body});
+});
+
+router.all('/test', function(req, res, next){
+  res.end('hello');
+});
+
 module.exports = router;
