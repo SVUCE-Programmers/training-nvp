@@ -9,6 +9,11 @@
                     <p class="card-text">{{description}}</p>
                     <a href="/projects/{{id}}" class="btn btn-primary">Go somewhere</a>
                 </div>
+                {{#each tags}}
+                    <div>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                {{/each}}
             </div>
         {{/each}}
     </div>

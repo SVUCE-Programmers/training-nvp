@@ -5,25 +5,29 @@ var projects = [{
   name: 'test project 1',
   image: '/images/projects/project1.jpg',
   description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: ''
+  link: '',
+  sliders: [{name: 'abcd', url:'/project1.jpg'}]
 },{
   id: 2,
   name: 'test project 2',
   image: '/images/projects/project2.jpg',
   description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: ''
+  link: '',
+  sliders: [{name: 'abcd', url:'/project1.jpg'}]
 },{
   id: 3,
   name: 'test project 3',
   image: '/images/projects/project3.jpg',
   description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: ''
+  link: '',
+  sliders: [{name: 'abcd', url:'/project1.jpg'}]
 },{
   id: 4,
   name: 'test project 4',
   image: '/images/projects/project4.jpg',
   description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: ''
+  link: '',
+  sliders: [{name: 'abcd', url:'/project1.jpg'}]
 }];
 
 /* GET home page. */
@@ -76,8 +80,9 @@ router.post('/contact', function(req, res, next) {
   res.render('confirm', { title: 'Confirm page', navContact: 'contact', data: req.body});
 });
 
-router.all('/test', function(req, res, next){
-  res.end('hello');
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Login', navContact: 'contact'});
 });
+
 
 module.exports = router;

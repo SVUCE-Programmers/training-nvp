@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var hbs = require('hbs');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var admin = require('./routes/admin');
 
 var app = express();
 
@@ -24,8 +24,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var isLoggedIn = function (req, res, next) {
+  // if(user is logged in)
+  if(req.session && req.session.user){
+    console.log('LOGGED:')
+    next()
+  }else{
+    res.redirect('/login');
+  }
+}
+
 app.use('/', index);
-app.use('/users', users);
+app.use('/admin', isLoggedIn,  admin);
 // app.user('/blog', blog);
 
 // catch 404 and forward to error handler
