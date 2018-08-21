@@ -94,6 +94,10 @@ router.post('/login', function(req, res, next){
     // redirect to dashboard
     console.log(email)
     console.log(pass)
+    var user = {email: email, name: 'Maohar'};
+    req.session.user = user;
+    req.session.isAuthenticated = true;
+
     res.redirect('/admin')
   }else{
     res.render('login', { title: 'Login', hasError: true, error: 'Invalid login details'});

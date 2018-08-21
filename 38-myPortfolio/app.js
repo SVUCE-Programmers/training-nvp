@@ -5,9 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('hbs');
-
+var session = require('express-session');
 var index = require('./routes/index');
 var admin = require('./routes/admin');
+var auth = require('./middleware/auth');
 
 var app = express();
 
@@ -24,18 +25,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// middleware function
-var isLoggedIn = function (req, res, next) {
-  if(req.session && req.session.user){
-    console.log('LOGGED:')
-    next()
-  }else{
-    res.redirect('/login');
-  }
-}
+app.use(session({
+	secret: 'top secret',
+	saveUninitialized: false,
+	resave: false,
+  cookie: { maxAge: 30 * 24 * 60 * 1000 }
+}));
+
+app.use(auth.authenticated);
 
 app.use('/', index);
-app.use('/admin', isLoggedIn,  admin);
+app.use('/admin', auth.authenticate,  admin);
 // app.user('/blog', blog);
 
 // catch 404 and forward to error handler
