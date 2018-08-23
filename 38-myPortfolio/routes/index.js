@@ -1,35 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var projects = [{
-  id: 1,
-  name: 'test project 1',
-  image: '/images/projects/project1.jpg',
-  description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: '',
-  sliders: [{name: 'abcd', url:'/project1.jpg'}]
-},{
-  id: 2,
-  name: 'test project 2',
-  image: '/images/projects/project2.jpg',
-  description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: '',
-  sliders: [{name: 'abcd', url:'/project1.jpg'}]
-},{
-  id: 3,
-  name: 'test project 3',
-  image: '/images/projects/project3.jpg',
-  description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: '',
-  sliders: [{name: 'abcd', url:'/project1.jpg'}]
-},{
-  id: 4,
-  name: 'test project 4',
-  image: '/images/projects/project4.jpg',
-  description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-  link: '',
-  sliders: [{name: 'abcd', url:'/project1.jpg'}]
-}];
-
+const MongoClient = require('mongodb').MongoClient;
+// Connection URL
+const url = 'mongodb://localhost:27017';
+// Database Name
+const dbName = 'myproject';
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'My Protfolio', navIndex: 'index'});
@@ -49,19 +24,28 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Projects', navProjects: 'projects', projects: projects});
+  MongoClient.connect(url, function(err, client) {
+    const db = client.db(dbName);
+    const collection = db.collection('projects');
+    collection.find({}).toArray(function(err, projects) {
+      res.render('projects', {
+        title: 'Projects', 
+        navProjects: 'projects', 
+        projects: projects
+      });
+    });
+  });
 },);
 
 router.get('/projects/:projectId', function(req, res, next){
-  var projectId = req.params.projectId;
-  var project;
-  for(var i=0; i< projects.length; i++){
-    if(projects[i].id == projectId){
-      project = projects[i];
-      break;
-    }
-  }
-  res.render('project-detail', { title: project? project.name: '' , project: project});
+  MongoClient.connect(url, function(err, client) {
+    const db = client.db(dbName);
+    const collection = db.collection('projects');
+    collection.findOne({'id': parseInt(req.params.projectId)}, function(err, project) {
+      console.log(project);
+      res.render('project-detail', { title: project? project.name: '' , project: project});
+    });
+  });
 });
 
 router.get('/blog', function(req, res, next) {
