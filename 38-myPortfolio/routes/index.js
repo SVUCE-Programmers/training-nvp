@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
-const MongoClient = require('mongodb').MongoClient;
-// Connection URL
-const url = 'mongodb://localhost:27017';
-// Database Name
-const dbName = 'myproject';
+var mongoose = require('mongoose');
+var Project = require('../model/projectModel');
+
+mongoose.connect('mongodb://localhost/myproject');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  console.log('connected to mongodb');
+});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'My Protfolio', navIndex: 'index'});
@@ -24,27 +30,26 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/projects', function(req, res, next) {
-  MongoClient.connect(url, function(err, client) {
-    const db = client.db(dbName);
-    const collection = db.collection('projects');
-    collection.find({}).toArray(function(err, projects) {
+  Project.find({},function(error, projects){
+    if(error)
+      console.log(error);
+    else{
       res.render('projects', {
         title: 'Projects', 
         navProjects: 'projects', 
         projects: projects
       });
-    });
+    }
   });
 },);
 
 router.get('/projects/:projectId', function(req, res, next){
-  MongoClient.connect(url, function(err, client) {
-    const db = client.db(dbName);
-    const collection = db.collection('projects');
-    collection.findOne({'id': parseInt(req.params.projectId)}, function(err, project) {
-      console.log(project);
+  Project.findOne({'id': parseInt(req.params.projectId)}, function(error, project){
+    if(error)
+      console.log(error);
+    else{
       res.render('project-detail', { title: project? project.name: '' , project: project});
-    });
+    }
   });
 });
 
