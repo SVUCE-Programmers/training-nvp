@@ -5,7 +5,6 @@ var http = require('http');
     2. define a callback function to handle the response
     3. we make the call to the server
     4. req.end 
-
 */
 // Options to be used by request 
 var options = {

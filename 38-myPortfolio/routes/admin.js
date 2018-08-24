@@ -38,6 +38,7 @@ router.post('/projects/create', function(req, res, next){
   projectModel.name = req.body.name;
   projectModel.description = req.body.description;
   projectModel.id = 10;
+  projectModel.comments= [{name:"Manohar",title:"Very nice project"},{name:"Ashu",title:"good project"}];
 
   projectModel.save(function(err, project){
     res.redirect('/admin/projects');

@@ -6,4 +6,12 @@
     <div>
         <p>{{project.description}}</p>
     </div>
+
+    {{#each project.comments}}
+        <div class="row">
+            Name: {{name}}
+            Comment: {{title}}
+            Date: {{createdAt}}
+        </div>
+    {{/each}}
 {{/if}}
