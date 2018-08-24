@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Module - AngularJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <p>Hi! My name is {{firstName}} {{lastName}}</p>
+            <my-directive></my-directive>
+        </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function($scope){
+                $scope.firstName = "Manohar";
+                $scope.lastName = "Negi";
+            });
+            app.directive("myDirective", function(){
+                return {
+                    template: '<h1>This is my directive</h1>'
+                };
+            });
+        </script>
+    </body>
+</html>
