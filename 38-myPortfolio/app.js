@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var hbs = require('hbs');
 var session = require('express-session');
 var index = require('./routes/index');
-//var admin = require('./routes/admin');
+var admin = require('./routes/admin');
 var auth = require('./middleware/auth');
 
 var app = express();
@@ -35,7 +35,7 @@ app.use(session({
 app.use(auth.authenticated);
 
 app.use('/', index);
-//app.use('/admin', auth.authenticate,  admin);
+app.use('/admin', auth.authenticate,  admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

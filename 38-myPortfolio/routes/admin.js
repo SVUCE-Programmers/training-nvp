@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Project = require('../model/projectModel');
+var Client = require('node-rest-client').Client;
+var client = new Client();
 
 router.all('/', function(req, res, next){
   res.render('admin/dashboard', { 
@@ -11,15 +12,14 @@ router.all('/', function(req, res, next){
 });
 
 router.get('/projects', function(req, res, next){
-  Project.find({},function(error, projects){
-    if(error)
-      console.log(error);
-    else{
+  client.get("http://localhost:3030/projects", function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
       res.render('admin/projects', { 
         layout: 'layout-admin', 
         title: 'Admin Dashboard', 
         navProjects: 'project',
-        projects: projects
+        projects: jsonData.data
       });
     }
   });
@@ -34,46 +34,54 @@ router.get('/projects/create', function(req, res, next){
 });
 
 router.post('/projects/create', function(req, res, next){
-  var projectModel = new Project();
-  projectModel.name = req.body.name;
-  projectModel.description = req.body.description;
-  projectModel.id = 10;
+  var args = {
+    data: req.body,
+    headers: { "Content-Type": "application/json" }
+  };
 
-  projectModel.save(function(err, project){
-    res.redirect('/admin/projects');
+  client.post("http://localhost:3030/projects", args, function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
+      res.redirect('/admin/projects');
+    }
   });
 });
 
 router.get('/projects/:id', function(req, res, next){
-  Project.findOne({'id': parseInt(req.params.id)},function(error, project){
-    if(error)
-      console.log(error);
-    else{
+  client.get("http://localhost:3030/projects/"+ req.params.id, function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
       res.render('admin/project-detail', { 
         layout: 'layout-admin', 
         title: 'Admin Dashboard', 
         navProjects: 'project',
-        project: project
+        project: jsonData.data
       });
     }
   });
 });
 
 router.post('/projects/:id', function(req, res, next){
-  var p = req.body;
-  Project.updateOne({'id':parseInt(req.params.id)}, {$set: p}, function(err, project){
-    console.log(project);
-    res.redirect('/admin/projects');
+  var args = {
+    data: req.body,
+    headers: { "Content-Type": "application/json" }
+  };
+
+  client.put("http://localhost:3030/projects/"+ req.params.id, args, function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
+      res.redirect('/admin/projects');
+    }
   });
-  // update link
 });
 
 router.get('/projects/:id/delete', function(req, res, next){
-  Project.deleteOne({'id':parseInt(req.params.id)}, function(err, project){
-    console.log(project);
-    res.redirect('/admin/projects');
+  client.delete("http://localhost:3030/projects/"+ req.params.id, function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
+      res.redirect('/admin/projects');
+    }
   });
-  // update link
 });
 
 module.exports = router;

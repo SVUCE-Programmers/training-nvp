@@ -27,7 +27,7 @@ router.get('/projects/:projectId', function(req, res, next){
     if(jsonData){
       res.render('project-detail', {
         title: 'Projects', 
-        navProjects: 'projects', 
+        navProjects: 'projects',
         project: jsonData.data
       });
     }
