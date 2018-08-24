@@ -10,6 +10,16 @@ var index = require('./routes/index');
 var admin = require('./routes/admin');
 var auth = require('./middleware/auth');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/myproject', { useNewUrlParser: true });
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  console.log('connected to mongodb');
+});
+
+
 var app = express();
 
 // view engine setup

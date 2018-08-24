@@ -1,15 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
 var Project = require('../model/projectModel');
-
-mongoose.connect('mongodb://localhost/myproject');
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  // we're connected!
-  console.log('connected to mongodb');
-});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
