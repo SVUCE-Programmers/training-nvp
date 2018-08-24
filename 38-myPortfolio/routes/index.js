@@ -1,45 +1,35 @@
 var express = require('express');
 var router = express.Router();
-var Project = require('../model/projectModel');
+var Client = require('node-rest-client').Client;
+var client = new Client();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'My Protfolio', navIndex: 'index'});
-  /*
-    checks for layout
-    by default: it will render in layout.hbs
-
-    render('name of the view', {})
-      by default it goes to view directory configured in app.js
-      app.set('views', path.join(__dirname, 'views'));
-
-      object: {}, options
-      var obj = { name: 'manohar', age: 20, 'address': 'bangalore' }
-      { layout: 'layout name', variable: obj }
-
-  */
 });
 
 router.get('/projects', function(req, res, next) {
-  Project.find({},function(error, projects){
-    if(error)
-      console.log(error);
-    else{
+  client.get("http://localhost:3030/projects", function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
       res.render('projects', {
         title: 'Projects', 
         navProjects: 'projects', 
-        projects: projects
+        projects: jsonData.data
       });
     }
   });
-},);
+});
 
 router.get('/projects/:projectId', function(req, res, next){
-  Project.findOne({'id': parseInt(req.params.projectId)}, function(error, project){
-    if(error)
-      console.log(error);
-    else{
-      res.render('project-detail', { title: project? project.name: '' , project: project});
+  client.get("http://localhost:3030/projects/" + req.params.projectId, function (jsonData, response) {
+    console.log(jsonData);
+    if(jsonData){
+      res.render('project-detail', {
+        title: 'Projects', 
+        navProjects: 'projects', 
+        project: jsonData.data
+      });
     }
   });
 });
